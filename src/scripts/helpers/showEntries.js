@@ -1,11 +1,11 @@
 import clearDom from './clearDom';
 import renderToDom from './renderToDom';
 
-const showEntries = () => {
+const showEntries = (array) => {
   clearDom();
 
   let domString = '';
-  Array.forEach((item) => {
+  array.forEach((item) => {
     domString += `
     <div class="card">
       <div class="card-body" style="height: 180px;">

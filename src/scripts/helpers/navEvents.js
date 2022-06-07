@@ -2,21 +2,23 @@ import newEntryForm from '../components/newEntryForm';
 import { getEntries } from '../../api/entryData';
 import { showEntries, emptyEntries } from './showEntries';
 
-const navEvents = (userID) => {
+const navEvents = () => {
   document.querySelector('#navigation').addEventListener('click', (e) => {
     if (e.target.id.includes('new-entry-nav')) {
       newEntryForm();
     }
   });
 
-  document.querySelector('#all-entries-nav').addEventListener('click', () => {
-    getEntries(userID).then((entriesArray) => {
-      if (entriesArray.length !== 0) {
-        showEntries(entriesArray);
-      } else {
-        emptyEntries(entriesArray);
-      }
-    });
+  document.querySelector('#navigation').addEventListener('click', (e) => {
+    if (e.target.id.includes('all-entries-nav')) {
+      getEntries().then((entriesArray) => {
+        if (entriesArray.length !== 0) {
+          showEntries(entriesArray);
+        } else {
+          emptyEntries(entriesArray);
+        }
+      });
+    }
   });
 };
 

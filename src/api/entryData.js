@@ -1,9 +1,11 @@
 import axios from 'axios';
+import firebaseConfig from './apiKeys';
 
-const dbUrl = 'https://kc-vocab-you-lary-default-rtdb.firebaseio.com';
+const dbUrl = firebaseConfig.databaseURL;
 
-const getEntries = (userID) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/vocab.json?orderBy="userID"&eyalTo="${userID}")`)
+const getEntries = () => new Promise((resolve, reject) => {
+  // axios.get(`${dbUrl}/vocab.json?orderBy="userID"&eyalTo="${userID}")`)
+  axios.get(`${dbUrl}/vocab.json)`)
     .then((response) => {
       if (response.data) {
         resolve(Object.values(response.data));
@@ -20,7 +22,7 @@ const createEntries = (entryObj) => new Promise((resolve, reject) => {
       const payload = { firebaseKey: response.data.firebaseKey };
       axios.patch(`${dbUrl}/vocab/${response.data.firebaseKey}.json`, payload)
         .then(() => {
-          getEntries(entryObj.userID).then(resolve);
+          getEntries(entryObj).then(resolve);
         });
     })
     .catch(reject);
@@ -35,7 +37,7 @@ const getSingleEntry = (firebaseKey) => new Promise((resolve, reject) => {
 const deleteEntry = (firebaseKey) => new Promise((resolve, reject) => {
   axios.delete(`${dbUrl}/vocab/${firebaseKey}.json`)
     .then(() => {
-      getEntries(firebaseKey.userID).then(resolve);
+      getEntries(firebaseKey).then(resolve);
     })
     .catch(reject);
 });
@@ -43,7 +45,7 @@ const deleteEntry = (firebaseKey) => new Promise((resolve, reject) => {
 const updateEntry = (entryObj) => new Promise((resolve, reject) => {
   axios.patch(`${dbUrl}/vocab/${entryObj.firebaseKey}.json`, entryObj)
     .then(() => {
-      getEntries(entryObj.userID).then(resolve);
+      getEntries(entryObj).then(resolve);
     })
     .catch(reject);
 });
