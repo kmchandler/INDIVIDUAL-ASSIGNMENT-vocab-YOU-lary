@@ -1,6 +1,6 @@
 import renderToDom from '../helpers/renderToDom';
 import clearDom from '../helpers/clearDom';
-import selectLanguage from '../helpers/selectLanguage';
+// import selectLanguage from '../helpers/selectLanguage';
 
 const newEntryForm = (obj = {}) => {
   clearDom();
@@ -21,7 +21,7 @@ const newEntryForm = (obj = {}) => {
     </form>`;
 
   renderToDom('#form-container', domString);
-  selectLanguage(`${obj.language_tech || ''}`);
+  // selectLanguage(`${obj.language_tech || ''}`);
 };
 
 export default newEntryForm;
