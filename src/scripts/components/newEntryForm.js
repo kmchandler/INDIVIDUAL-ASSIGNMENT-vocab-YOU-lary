@@ -2,7 +2,7 @@ import renderToDom from '../helpers/renderToDom';
 import clearDom from '../helpers/clearDom';
 import selectLanguage from '../helpers/selectLanguage';
 
-const newEntryForm = (userID, obj = {}) => {
+const newEntryForm = (obj = {}) => {
   clearDom();
   const domString = `
     <form id="${obj.firebaseKey ? `update-entry--${obj.firebaseKey}` : 'submit-entry'}" class="mb-4">
@@ -21,7 +21,7 @@ const newEntryForm = (userID, obj = {}) => {
     </form>`;
 
   renderToDom('#form-container', domString);
-  selectLanguage(userID, `${obj.language_tech || ''}`);
+  selectLanguage(`${obj.language_tech || ''}`);
 };
 
 export default newEntryForm;
