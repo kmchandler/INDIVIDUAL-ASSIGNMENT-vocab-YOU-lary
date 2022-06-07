@@ -8,15 +8,18 @@ const showEntries = (array) => {
   array.forEach((item) => {
     domString += `
     <div class="card">
-      <div class="card-body" style="height: 180px;">
-        <h5 class="card-word">${item.title}</h5>
+      <div class="card-body">
+        <div class="card-body"
+          <h5 class="card-title">${item.title}</h5>
           <hr>
-          <p class="card-definition">${item.definition}</p>
-          <p class="card-language_tech">${item.language_tech}</p>
-          <p class="card-timeSubmitted">${item.timeSubmitted}</p>
-          <p class="card-userID">${item.userID}</p>
-          <i id="edit-entry-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info"></i>
-          <i id="delete-entry-btn--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt"></i>
+          <p class="card-text">${item.definition}</p>
+          <hr>
+          <p class="card-text">${item.language_tech}</p>
+          <p class="card-text">${item.timeSubmitted}</p>
+          <p class="card-text">${item.userID}</p>
+          <a href="#" id="edit-entry-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info"></a>
+          <a href="#" id="delete-entry-btn--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt"></a>
+      </div>
       </div>
     </div>`;
   });
