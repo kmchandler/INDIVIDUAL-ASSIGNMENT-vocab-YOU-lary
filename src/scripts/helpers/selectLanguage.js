@@ -1,23 +1,23 @@
 // import renderToDOM from './renderToDom';
 
-// const selectLanguage = (uid, authorId) => {
-//   let domString = `<label for="author">Select an Author</label>
+// const selectLanguage = (uid, firebaseKey) => {
+//   let domString = `<label for="author">Select a Language</label>
 //     <select class="form-control" id="author_id" required>
-//     <option value="">Select an Author</option>`;
+//     <option value="">Select a Language</option>`;
 
-//   getEntry(uid, authorId).then((authorsArray) => {
-//     authorsArray.forEach((author) => {
+//   getEntry(uid, firebaseKey).then((entriesArray) => {
+//     entriesArray.forEach((entry) => {
 //       domString += `
 //           <option
-//             value="${author.firebaseKey}"
-//             ${authorId === author.firebaseKey ? 'selected' : ''}>
-//               ${author.first_name} ${author.last_name}
+//             value="${entry.firebaseKey}"
+//             ${firebaseKey === entry.firebaseKey ? 'selected' : ''}>
+//               ${entry.title}
 //           </option>`;
 //     });
 
 //     domString += '</select>';
 
-//     renderToDOM('#select-author', domString);
+//     renderToDOM('#select-language', domString);
 //   });
 // };
 
