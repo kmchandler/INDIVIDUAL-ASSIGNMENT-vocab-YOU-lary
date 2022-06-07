@@ -1,4 +1,4 @@
-import renderToDOM from '../scripts/helpers/renderToDom';
+import renderToDOM from '../helpers/renderToDom';
 
 const domBuilder = () => {
   const domString = `
