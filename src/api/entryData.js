@@ -3,9 +3,8 @@ import firebaseConfig from './apiKeys';
 
 const dbUrl = firebaseConfig.databaseURL;
 
-const getEntries = () => new Promise((resolve, reject) => {
-  // axios.get(`${dbUrl}/vocab.json?orderBy="userID"&eyalTo="${userID}")`)
-  axios.get(`${dbUrl}/vocab.json`)
+const getEntries = (userID) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/vocab.json?orderBy="userID"&eyalTo="${userID}")`)
     .then((response) => {
       if (response.data) {
         resolve(Object.values(response.data));
