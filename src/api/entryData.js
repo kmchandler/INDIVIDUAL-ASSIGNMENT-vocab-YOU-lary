@@ -4,7 +4,7 @@ import firebaseConfig from './apiKeys';
 const dbUrl = firebaseConfig.databaseURL;
 
 const getEntries = (userID) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/vocab.json?orderBy="userID"&equalTo="${userID}")`)
+  axios.get(`${dbUrl}/vocab.json?orderBy="userID"&equalTo="${userID}"`)
     .then((response) => {
       if (response.data) {
         resolve(Object.values(response.data));
@@ -21,7 +21,7 @@ const createEntries = (entryObj) => new Promise((resolve, reject) => {
       const payload = { firebaseKey: response.data.name };
       axios.patch(`${dbUrl}/vocab/${response.data.name}.json`, payload)
         .then(() => {
-          getEntries(entryObj).then(resolve);
+          getEntries(entryObj.userID).then(resolve);
         });
     })
     .catch(reject);
