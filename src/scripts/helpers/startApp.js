@@ -2,10 +2,11 @@ import domBuilder from './domBuilder';
 import navBar from '../components/navBar';
 import navEvents from './navEvents';
 import formEvents from './formEvents';
+import domEvents from './domEvents';
 
 const startApp = () => {
-  domBuilder(); // BUILD THE DOM
-  // domEvents(user.uid); // ADD THE EVENT LISTENTERS TO THE DOM
+  domBuilder();
+  domEvents();
   formEvents();
   navBar();
   navEvents();
