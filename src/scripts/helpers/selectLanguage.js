@@ -1,24 +1,41 @@
-// import renderToDOM from './renderToDom';
+import renderToDOM from './renderToDom';
 
-// const selectLanguage = (uid, firebaseKey) => {
-//   let domString = `<label for="author">Select a Language</label>
-//     <select class="form-control" id="author_id" required>
-//     <option value="">Select a Language</option>`;
+const selectLanguage = () => {
+  let domString = `<label for="author">Select a Language</label>
+    <select class="form-control" id="selectedLanguage" required>
+    <option value="">Select a Language</option>;
+          <option
+            value="CSS">
+            CSS
+          </option>
+          <option
+            value="Django">
+            Django
+          </option>
+          <option
+            value="HTML">
+            HTML
+          </option>
+          <option
+            value="JavaScript">
+            JavaScript
+          </option>
+          <option
+            value="Python">
+            Python
+          </option>
+          <option
+            value="React">
+            React
+          </option>
+          <option
+            value="Tech">
+            Tech
+          </option>`;
 
-//   getEntry(uid, firebaseKey).then((entriesArray) => {
-//     entriesArray.forEach((entry) => {
-//       domString += `
-//           <option
-//             value="${entry.firebaseKey}"
-//             ${firebaseKey === entry.firebaseKey ? 'selected' : ''}>
-//               ${entry.title}
-//           </option>`;
-//     });
+  domString += '</select>';
 
-//     domString += '</select>';
+  renderToDOM('#select-language', domString);
+};
 
-//     renderToDOM('#select-language', domString);
-//   });
-// };
-
-// export default selectLanguage;
+export default selectLanguage;
