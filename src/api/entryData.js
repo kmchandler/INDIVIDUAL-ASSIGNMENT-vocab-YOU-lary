@@ -19,8 +19,8 @@ const getEntries = () => new Promise((resolve, reject) => {
 const createEntries = (entryObj) => new Promise((resolve, reject) => {
   axios.post(`${dbUrl}/vocab.json`, entryObj)
     .then((response) => {
-      const payload = { firebaseKey: response.data.firebaseKey };
-      axios.patch(`${dbUrl}/vocab/${response.data.firebaseKey}.json`, payload)
+      const payload = { firebaseKey: response.data.name };
+      axios.patch(`${dbUrl}/vocab/${response.data.name}.json`, payload)
         .then(() => {
           getEntries(entryObj).then(resolve);
         });
