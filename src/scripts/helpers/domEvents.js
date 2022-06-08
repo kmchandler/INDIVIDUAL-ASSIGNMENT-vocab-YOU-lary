@@ -20,4 +20,4 @@ const domEvents = (userID) => {
   });
 };
 
-export default domEvents;
+export default { domEvents };
