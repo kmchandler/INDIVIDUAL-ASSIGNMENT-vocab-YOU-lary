@@ -10,7 +10,7 @@ const formEvents = (uid) => {
       const entryObject = {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
-        language_tech: document.querySelector('#select-Language').value,
+        language_tech: document.querySelector('#selectedLanguage').value,
         timeSubmitted: timeStamp,
         firebaseKey,
         uid

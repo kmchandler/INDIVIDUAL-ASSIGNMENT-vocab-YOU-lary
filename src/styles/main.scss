@@ -3,8 +3,107 @@
 
 
 body {
-  background-color: antiquewhite;
-  color: brown;
+  background-color: #CBDCCB;
+  color: white;
   text-align: center;
   margin-top: 100px;
+  width: 100%;
+}
+
+#main-container {
+  width: 100%;
+}
+
+#cardDiv {
+  width: 400px;
+  background-color: #FBFFFE;
+  color: #52664F;
+  margin: 1% 1% 5% 5%;
+}
+
+#cardContainer {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.btnCSS {
+  background-color: #52664F;
+  border: none;
+}
+
+#navCSS {
+  background-color: #52664F;
+  color:#FBFFFE;
+}
+
+#titleCSS {
+  color:#FBFFFE;
+}
+
+.nav-link {
+  color:#FBFFFE;
+}
+
+.nav-link:hover {
+  color: #CBDCCB;
+}
+
+.greenBtn {
+  background-color: #52664F;
+  border: none;
+  color: #FBFFFE;
+}
+
+.greenBtn:hover {
+  background-color: #FBFFFE;
+  color: #52664F;
+  border-style: solid;
+  border-color: #52664F;
+}
+
+.btnCSS:hover {
+  background-color: #CBDCCB;
+  color: #52664F;
+  border-style: solid;
+  border-color: #52664F;
+}
+
+#timeUser {
+  font-size: 10px;
+}
+
+#view {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: 4%;
+}
+
+#navLogoDiv {
+  margin-right: 20px;
+}
+
+#formCSS {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: #52664F;
+}
+
+#submitBtn {
+  margin-top: 10px;
+  background-color: #52664F;
+  border: none;
+}
+
+#submitBtn:hover {
+  background-color: #CBDCCB;
+  color: #52664F;
+  border-style: solid;
+  border-color: #52664F;
+}
+
+#definitionDiv {
+  height: 215px;
 }
