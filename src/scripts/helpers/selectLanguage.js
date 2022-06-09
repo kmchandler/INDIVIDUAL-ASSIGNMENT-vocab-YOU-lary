@@ -10,32 +10,32 @@ const selectLanguage = (languageType) => {
             CSS
           </option>
           <option
-            value="Django">
+            value="Django"
             selected=${languageType === 'Django'}>
             Django
           </option>
           <option
-            value="HTML">
+            value="HTML"
             selected=${languageType === 'HTML'}>
             HTML
           </option>
           <option
-            value="JavaScript">
+            value="JavaScript"
             selected=${languageType === 'JavaScript'}>
             JavaScript
           </option>
           <option
-            value="Python">
+            value="Python"
             selected=${languageType === 'Python'}>
             Python
           </option>
           <option
-            value="React">
+            value="React"
             selected=${languageType === 'React'}>
             React
           </option>
           <option
-            value="Tech">
+            value="Tech"
             selected=${languageType === 'Tech'}>
             Tech
           </option>`;

@@ -5,10 +5,10 @@ const navBar = () => {
   const navLogo = `
   <span class="iconify" data-icon="emojione:letter-v" data-width="30" data-height="30"></span>`;
   const domString = `
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark mb-5">
+    <nav id="navCSS" class="navbar fixed-top navbar-expand-lg mb-5">
     <div class="container-fluid">
         <a id="navLogoDiv">${navLogo}</a>
-        <a class="navbar-brand title" href="#">ocab-YOU-lary</a>
+        <a id="titleCSS" class="navbar-brand title">vocab-YOU-lary</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
