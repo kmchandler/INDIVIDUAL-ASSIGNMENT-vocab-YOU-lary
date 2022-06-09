@@ -1,7 +1,7 @@
 import { createEntries, updateEntry } from '../../api/entryData';
 import { showEntries } from './showEntries';
 
-const formEvents = (userID) => {
+const formEvents = (uid) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
     e.preventDefault();
     const [, firebaseKey] = e.target.id.split('--');
@@ -10,12 +10,14 @@ const formEvents = (userID) => {
       const entryObject = {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
-        language_tech: document.querySelector('#selectedLanguage').value,
+        language_tech: document.querySelector('#select-Language').value,
         timeSubmitted: timeStamp,
         firebaseKey,
-        userID
+        uid
       };
-      createEntries(entryObject).then((entryArray) => showEntries(entryArray));
+      createEntries(entryObject).then((entryArray) => {
+        showEntries(entryArray);
+      });
     }
 
     if (e.target.id.includes('update-entry')) {
@@ -25,7 +27,7 @@ const formEvents = (userID) => {
         language_tech: document.querySelector('#select-language').value,
         timeSubmitted: timeStamp,
         firebaseKey,
-        userID
+        uid
       };
 
       updateEntry(entryObject).then((entryArray) => showEntries(entryArray));

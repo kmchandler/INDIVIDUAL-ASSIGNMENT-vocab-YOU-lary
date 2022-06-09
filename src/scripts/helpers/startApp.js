@@ -5,14 +5,15 @@ import formEvents from './formEvents';
 import domEvents from './domEvents';
 import { getEntries } from '../../api/entryData';
 import { showEntries } from './showEntries';
+// import filter from './filter';
 
 const startApp = (user) => {
-  domBuilder(user.userID);
-  domEvents(user.userID);
-  formEvents(user.userID);
+  domBuilder(user.uid);
+  domEvents(user.uid);
+  formEvents(user.uid);
   navBar();
-  navEvents(user.userID);
-  getEntries(user.userID).then((booksArray) => showEntries(booksArray));
+  navEvents(user.uid);
+  getEntries(user.uid).then((booksArray) => showEntries(booksArray));
 };
 
 export default startApp;

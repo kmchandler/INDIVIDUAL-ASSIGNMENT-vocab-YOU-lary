@@ -18,7 +18,7 @@ const showEntries = (array) => {
           <hr>
           <p class="card-text">${item.language_tech}</p>
           <p class="card-text">${item.timeSubmitted}</p>
-          <p class="card-text">${item.userID}</p>
+          <p class="card-text">${item.uid}</p>
           <a href="#" id="edit-entry-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info"></a>
           <a href="#" id="delete-entry-btn--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt"></a>
       </div>
@@ -27,13 +27,14 @@ const showEntries = (array) => {
   });
 
   buttonString += `
+  <button type="button" id="allFilter" class="btn btn-primary">All Entries</button>
   <button type="button" id="cssFilter" class="btn btn-primary">CSS</button>
-  <button type="button" id="djangoFilter" class="btn btn-primary">Django</button>
-  <button type="button" id="htmlFilter" class="btn btn-primary">HTML</button>
-  <button type="button" id="javascriptFilter" class="btn btn-primary">Javascript</button>
-  <button type="button" id="pythonFilter" class="btn btn-primary">Python</button>
-  <button type="button" id="reactFilter" class="btn btn-primary">React</button>
-  <button type="button" id="techFilter" class="btn btn-primary">Tech</button>
+  <button type="button" id="django" class="btn btn-primary">Django</button>
+  <button type="button" id="html" class="btn btn-primary">HTML</button>
+  <button type="button" id="javascript" class="btn btn-primary">Javascript</button>
+  <button type="button" id="python" class="btn btn-primary">Python</button>
+  <button type="button" id="react" class="btn btn-primary">React</button>
+  <button type="button" id="tech" class="btn btn-primary">Tech</button>
   `;
 
   renderToDom('#view', domString);
