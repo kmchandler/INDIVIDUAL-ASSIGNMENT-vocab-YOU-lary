@@ -5,7 +5,6 @@ import formEvents from './formEvents';
 import domEvents from './domEvents';
 import { getEntries } from '../../api/entryData';
 import { showEntries } from './showEntries';
-// import filter from './filter';
 
 const startApp = (user) => {
   domBuilder(user.uid);

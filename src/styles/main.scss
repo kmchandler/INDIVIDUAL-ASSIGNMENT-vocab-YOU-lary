@@ -24,6 +24,8 @@ body {
 #cardContainer {
   display: flex;
   flex-flow: row wrap;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btnCSS {
@@ -106,4 +108,9 @@ body {
 
 #definitionDiv {
   height: 215px;
+}
+
+#view {
+  margin-left: auto;
+  margin-right: auto;
 }

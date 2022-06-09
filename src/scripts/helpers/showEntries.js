@@ -35,7 +35,6 @@ const showEntries = (array) => {
   buttonString += `
   <button type="button" id="allFilter" class="btn btn-primary btnCSS">All Entries</button>
   <button type="button" id="css" class="btn btn-primary btnCSS">CSS</button>
-  <button type="button" id="django" class="btn btn-primary btnCSS">Django</button>
   <button type="button" id="html" class="btn btn-primary btnCSS">HTML</button>
   <button type="button" id="javascript" class="btn btn-primary btnCSS">Javascript</button>
   <button type="button" id="python" class="btn btn-primary btnCSS">Python</button>

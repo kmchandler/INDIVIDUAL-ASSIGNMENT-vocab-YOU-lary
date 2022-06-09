@@ -33,10 +33,10 @@ const getSingleEntry = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const deleteEntry = (firebaseKey) => new Promise((resolve, reject) => {
+const deleteEntry = (firebaseKey, entryObj) => new Promise((resolve, reject) => {
   axios.delete(`${dbUrl}/vocab/${firebaseKey}.json`)
     .then(() => {
-      getEntries(firebaseKey).then(resolve);
+      getEntries(entryObj).then(resolve);
     })
     .catch(reject);
 });
@@ -44,7 +44,7 @@ const deleteEntry = (firebaseKey) => new Promise((resolve, reject) => {
 const updateEntry = (entryObj) => new Promise((resolve, reject) => {
   axios.patch(`${dbUrl}/vocab/${entryObj.firebaseKey}.json`, entryObj)
     .then(() => {
-      getEntries(entryObj).then(resolve);
+      getEntries(entryObj.uid).then(resolve);
     })
     .catch(reject);
 });
