@@ -1,46 +1,16 @@
 import renderToDOM from './renderToDom';
 
 const selectLanguage = (languageType) => {
-  let domString = `<label for="author">Select a Language</label>
+  const domString = `<label for="selectedLanguage">Select a Language</label>
     <select class="form-control" id="selectedLanguage" required>
-    <option value="">Select a Language</option>;
-          <option
-            value="CSS"
-            selected=${languageType === 'CSS'}>
-            CSS
-          </option>
-          <option
-            value="Django"
-            selected=${languageType === 'Django'}>
-            Django
-          </option>
-          <option
-            value="HTML"
-            selected=${languageType === 'HTML'}>
-            HTML
-          </option>
-          <option
-            value="JavaScript"
-            selected=${languageType === 'JavaScript'}>
-            JavaScript
-          </option>
-          <option
-            value="Python"
-            selected=${languageType === 'Python'}>
-            Python
-          </option>
-          <option
-            value="React"
-            selected=${languageType === 'React'}>
-            React
-          </option>
-          <option
-            value="Tech"
-            selected=${languageType === 'Tech'}>
-            Tech
-          </option>`;
-
-  domString += '</select>';
+      <option value="">Select a Language</option>;
+      <option value="CSS" selected=${languageType === 'CSS'}>CSS</option>
+      <option value="HTML" ${languageType === 'HTML' ? 'selected' : ''}>HTML</option>
+      <option value="JavaScript" ${languageType === 'JavaScript' ? 'selected' : ''}>JavaScript</option>
+      <option value="Python" ${languageType === 'Python' ? 'selected' : ''}>Python</option>
+      <option value="React" ${languageType === 'React' ? 'selected' : ''}>React</option>
+      <option value="Tech" ${languageType === 'Tech' ? 'selected' : ''}>Tech</option>;
+    </select>`;
 
   renderToDOM('#select-language', domString);
 };

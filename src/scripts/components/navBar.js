@@ -3,7 +3,7 @@ import logoutButton from './logoutButton';
 
 const navBar = () => {
   const navLogo = `
-  <span class="iconify" data-icon="emojione:letter-v" data-width="30" data-height="30"></span>`;
+  <span class="iconify" data-icon="mdi:alpha-v-circle-outline" style="color: white;" data-width="40" data-height="40"></span>`;
   const domString = `
     <nav id="navCSS" class="navbar fixed-top navbar-expand-lg mb-5">
     <div class="container-fluid">
