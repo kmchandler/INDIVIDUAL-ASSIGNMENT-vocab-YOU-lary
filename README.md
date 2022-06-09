@@ -1,91 +1,38 @@
 # vocab-YOU-lary
+An application that allows users to CRUD vocabulary cards, authenticate with Google, and filter.
 
-In this student assessment, you will be creating an application that allows users to CRUD vocabulary cards, authenticate with Google, and filter.
+## Description of User
+The target user for this app is developers or those interested in learning development or tech terms.
 
-## Learning Objectives
-- Single Responsibility Principle (each component/function should have one job)
-- Import/Export modules
-- DOM manipulation with Vanilla JS
-- DOM querying with Vanilla JS
-- Representing data as HTML
-- Usage of semantic HTML5 tags
-- Asynchronous Programming
-- Promises 
+## List of Features
+Users can:
+-Login to the app with their Google account
+-Create vocabulary cards for terms related to general tech or specific languages
+-Filter the cards by language/tech
+-Edit cards
+-Delete cards
+-Logout of the app
 
-## REMINDER
-We are not looking for completion of all stretch goals, but are focused on you hitting MVP, although if you can make it work completely, then wahoo!
+## Links to Wireframes and Flowcharts
+Wireframe: https://www.figma.com/file/UPDdAXuNhM6kxy88XkofVd/Vocab-YOU-lary-FLOWCHART?node-id=0%3A1
+ERD: https://dbdiagram.io/d/629b883954ce2635275d47ff
 
-What we are looking for is MVP, time management, critical thinking about the concepts, creative thinking to bind the concepts together for a solution, and collaboration with your teammates and instruction team.
+## Link to Deployed App
+https://kc-vocab-you-lary.netlify.app/
 
-If you only get MVP complete, but display the above Core Skills and can demonstrate understanding of the fundamental code concepts, then you are learning and growing - which is what we care about.
+## Link to Project Board
+https://github.com/kmchandler/INDIVIDUAL-ASSIGNMENT-vocab-YOU-lary/projects/1
 
-## Tools To Use:
-- Postman for API testing
-- Firebase for database, rules, and authentication
-- Webpack template setup steps (Located in your cohort repo)
-- dbdiagram.io for creating your ERD
-- Figma, google slides, or paper for flow charting your application
-- Axios for requests
-- Github projects/milestones for planning out work
-- Bootstrap 5 for styling
+# Screenshots of App
+![alt text](images/landingPage.png "Landing Page")
+![alt text](images/allEntries.png "All Entries")
+![alt text](images/allEntries2.png "All Entries 2")
+![alt text](images/filterByLanguage.png "Filter by Language")
+![alt text](images/createForm.png "Create Form")
 
-Make sure your Developer Tools are open at all times while working on this project. Use the messages provided in the Console to determine what code needs to be fixed or implemented, and use breakpoints in the Sources tab to step through your code as you debug.
+# Contributors
+Kristen Chandler
+https://github.com/kmchandler
 
-## Get Started
-Create issue tickets from the items below to help you get started. 
-- [ ] Setup your firebase project and create the `.env` file with your keys. (Reference the [Firebase videos](https://vimeo.com/showcase/codetracker-firebase) if you need help getting started)
-- [ ] Plan your project. Take no more than an hour to plan (ERD, Flow Chart, Postman)
-- [ ] Use this template (webpack) to create the project on your github account
-- [ ] Make sure you are in your `workspace/foundations/exercises` directory
-- [ ] `git clone YOUR_GITHUB_REPO_LINK`
-- [ ] `cd` into the directory
-- [ ] Run `npm install` to install your dependencies
-- [ ] Type `code .` to open the project in VS Code
-- [ ] `npm start` to start your server
-- [ ] Plan your project by creating the tickets you will work through using Github Projects
-- [ ] START CODING!
-
-# MVP Requirements
-[MVP Wireframe](https://www.figma.com/file/IW4jF3GnzCFLYbEXlgFNIZ/MVP)
-- [ ] An ERD of your data
-- [ ] Use Firebase for DB and authentication
-- [ ] Technical Flow chart (timebox this)
-- [ ] The app has a navigation bar
-  - [ ] A logo
-  - [ ] Logout button
-  - [ ] Create Entry
-  - [ ] Any other options you would like to add
-
-**The most basic requirement for this project is that a user can:**
-- [ ] Login and Logout of the application using Firebase Google Authentication
-- [ ] only see the vocabulary entries that they created
-- [ ] CREATE a vocabulary entry:
-  - [ ] Title
-  - [ ] Definition
-  - [ ] Language/Tech
-  - [ ] Time submitted - Not on form. Handle in your JS
-  - [ ] user ID - Not on form. Pull from User object.
-- [ ] READ THIER entries
-- [ ] UPDATE THEIR entries
-- [ ] DELETE THEIR entries
-- [ ] Filter by language/tech
-- [ ] Style your application using your own creativity!
-- [ ] No errors - linters should be clean
-
-## Stretch 1
-[Stretch 1 Wireframe](https://www.figma.com/file/yZE38QzpoUWELA22gGZJve/Stretch-1)
-- [ ] Allow users to order entries alphabetically, newest, oldest
-
-## Stretch 2
-[Stretch 2 Wireframe](https://www.figma.com/file/UC3Gi8HFRkZY8OIMOAUgL4/Stretch-2)
-- [ ] Users can search vocabulary entries
-- [ ] Users can add Language/Tech to the database and refrerence it on their vocabulary entries
-- [ ] Users can only see the Languages/Tech categories that they created
-
-## Stretch 3
-[Stretch 3 Wireframe](https://www.figma.com/file/KgbkfaoRd5F8Q4qZ3G2Bg2/Stretch-3)
-- [ ] Users can mark an entry as public or private
-- [ ] Create a new navigation item called "Community" and on click of this item, users can see all the public entries
-- [ ] If an entry is public, anyone can READ it. If it is private, only the user who created it can see it.
-- [ ] If an entry is public, only the user who created it can CRUD on it
-- [ ] If an entry is public, any user can copy the entry to their own set of entries and then CRUD on the new/copied entry
+## Loom Walkthrough
+https://www.loom.com/share/9dae6e61c0c54489a21f25ef3b7239c4
